@@ -1,10 +1,22 @@
-<!DOCTYPE htmk>
+<!DOCTYPE html>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap">
-
-<title>I am very sorry for my actions.</title>
-
-<Style>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hello</title>
+<style>
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: "Stack Sans Text", sans-serif;
+    background-image: url("pickle.jpg");
+    margin: 0;
+  }
 
     #cover {
         position: fixed;
@@ -23,108 +35,51 @@
         opacity: 0;
         pointer-events: none;
     }
+  
 
+  #video {
+    display: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
 
-    body {
-        font-family: "Stack Sans Text", sans-serif;
-        text-align: center;
-        background-image: url("pickle.jpg");
-    }
-
-    #info {
-        background-color: white;
-        border-color: white;
-        border-radius: 15px;
-        padding: 10px;
-    }
-
-    iframe {
-        border-radius: 15px;
-    }
-
-    a {
-        color: inherit;        
-        text-decoration: none; 
-        cursor: text;         
-    }
-</Style>
-
-<body>
-
-    <audio id="player"></audio>
-    <div id="cover" onclick="play()">
-        <h1>My statement on the google doc. (click)</h1>
-    </div>
-
-    <script>
-        const song = ["sound.mp3"];
-
-        function play() {
-            const cover = document.getElementById("cover");
-            const player = document.getElementById("player");
-
-            player.src = song[0];
-            player.volume = 0.2;
-
-            cover.classList.add("hidden");
-            player.play();
-        }
-    </script>
-
-    <br>
-    <div id="info">
-        <h1>Hello, please note the blanked name on pages 5-6 is Li@m (stay123s).</h1>
-        <p>Its 2025 guys, no need to blank out names...</p>
-
-        <p>I am very sorry for my actions. According to Liam removing assets from groups is allowed (Oakwood x Scarefest Partnership).</p>
-        <p>Yet he removed his assets from both <b>Wickerman</b> and Oakwood.</p>
-        
-        <p>Let the records state. Oakwood Online didn't ask for permission to uses screenshots!?!?!??!</p>
-
-        <br><br>
+  
+</style>
 
 
 
-        <p>Image has been removed as the person as asked me to. <a href="https://mackscframe.github.io/doc/yikes.png">(respect privacy guys!)</a></p>
-        <img src="" width="800" height="250" alt="where image gone... ">
-
-        <h1>🤔🤔🤔</h1>
-        <img src="shot3.png" width="600" height="200" alt="where image gone... ">
-        <img src="shot4.png" width="600" height="200" alt="where image gone... ">
-
-        <br><br>
-
-         <p>Firstly, Liam’s has decided to edit the very import and serious google document to add provocative comments.</p>
-        <p>#StopWithThis #GoogleDOCsW #LihamHatesWomen????</p>
-
+<div id="zero"><button onclick="play()">Click me!</button></div>
 <br>
 
-<audio controls>
-  <source src="sounde.MP3" type="audio/mpeg">
-  Your browser does not support the audio tag.
-</audio>
+
+<audio id="player"></audio>
+<div id="cover" onclick="play()">
+    <h1>My statement on the google doc. (click)</h1>
+</div>
+
+<video id="video" width="100%" height="100%"><source src="video.mp4" type="video/mp4"></video>
+
+<script>
+  const player = document.getElementById("video");
+
+  const zero = document.getElementById("zero");
+
+
+  function play() {
+    
+    const cover = document.getElementById("cover");
 
 
 
-         <img src="shot5.png" width="600" height="200" alt="where image gone... ">
+    cover.classList.add("hidden");
+    zero.classList.add("hidden");
 
-                
-        <a href="https://www.freecounterstat.com" title="website counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=2lmpwykz5kug3eul5gkmqrb8wb8p2xnq" border="0" title="website counter" alt="website counter"></a>
-
-        
-        <h1>Jenson, if your reading yk that I know this doc will do nothing! (you still upset about Jonha btw????)</h1>
-                <img src="shot6.png" width="600" height="200" alt="where image gone... ">
-
-
-    </div>
-    <br>
-
-
-    <br><br>
-<iframe src="doc.pdf" width="75%" height="100%" style="border:1px solid black;">
-
-<br><br>
-
-
-</iframe>
-</body>
+    
+    player.style.display = "block";
+    player.play();
+  }
+  
+</script>
